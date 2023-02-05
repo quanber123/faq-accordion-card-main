@@ -21,12 +21,12 @@ body {
     background: linear-gradient(var(--soft-violet), var(--soft-blue));
 }
 
-@media only screen and (min-width : 375px ) and (max-width : 600px) {
+@media only screen and (min-width : 375px ) and (max-width : 600px) and (max-height : 667px) {
 
     .container {
         width: 90%;
         height: 100%;
-        margin: 20em auto 0;
+        margin: 12em auto 2em;
         background: #fff;
         display: flex;
         justify-content: center;
@@ -45,7 +45,7 @@ body {
         background-size: contain;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -60%);
+        transform: translate(-50%, -80%);
         position: absolute;
         z-index: 2;
     }
@@ -58,14 +58,14 @@ body {
         top: 50%;
         left: 50%;
         background: url(./images/illustration-woman-online-mobile.svg) no-repeat;
-        transform: translate(-50%, -110%);
+        transform: translate(-50%, -130%);
         position: absolute;
         z-index: 2;
     }
 
     .content-container {
         width: 85%;
-        margin: 10em auto 10em;
+        margin: 10em auto 3em;
     }
 
     .content-container>section {
@@ -100,13 +100,14 @@ body {
         margin-top: -0.5em;
     }
 
-    .down-ic {
+    .accordion-ic {
         transform: rotate(0);
     }
 
-    .show {
+    .accordion-content {
         width: 90%;
         font-size: 0.8rem;
+        display: none;
     }
 
 }
