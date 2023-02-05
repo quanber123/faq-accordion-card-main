@@ -1,0 +1,109 @@
+
+:root {
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    --light-grayish-blue: hsl(240, 5%, 91%);
+    --font-size: 12px;
+    /* --weights-400: 400;
+    --weights-700: 700; */
+}
+
+@font-face {
+    font-family: "kumbhsan-400";
+    src: url(./static/KumbhSans-Regular.ttf);
+}
+
+body {
+    font-family: "kumbhsan-400", sans-serif;
+    font-size: var(--font-size);
+    /* font-weight: var(--weights-400); */
+    background: linear-gradient(var(--soft-violet), var(--soft-blue));
+}
+
+.container {
+    min-width: 375px;
+    min-height: 667px;
+    width: 375px;
+    height: 667px;
+    margin: 12em auto 0;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    z-index: 1;
+    /* position: relative; */
+}
+
+.bg-pattern-img {
+    width: 70%;
+    height: 20em;
+    margin: 0 auto;
+    background: url(./images/bg-pattern-mobile.svg) no-repeat;
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    position: absolute;
+    z-index: 2;
+}
+
+.container::after {
+    content: "";
+    width: 70%;
+    height: 20em;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    background: url(./images/illustration-woman-online-mobile.svg) no-repeat;
+    transform: translate(-50%, -130%);
+    position: absolute;
+    z-index: 2;
+}
+
+.content-container {
+    width: 85%;
+    margin: 15em auto 10em;
+}
+
+.content-container > section{
+    border-bottom: 1px solid var(--light-grayish-blue);
+    font-family: sans-serif;
+    font-size: 0.7rem;
+    src: url(./static/KumbhSans-Medium.ttf);
+    color: var(--dark-grayish-blue);
+}
+
+.content-container > section > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+h1{
+    font-family: sans-serif;
+    src: url(./static/KumbhSans-Medium.ttf);
+    font-size: 2rem;
+    color: var(--very-dark-grayish-blue);
+    text-shadow: 0 0 1px var(--very-dark-grayish-blue);
+    text-align: center;
+}
+
+h3{
+    width: 90%;
+}
+
+p{
+    margin-top: -0.5em;
+}
+.down-ic{
+    transform: rotate(0);
+}
+.show{
+    width: 90%;
+    font-size: 0.8rem;
+}
