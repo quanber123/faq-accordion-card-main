@@ -4,6 +4,7 @@
     --very-dark-grayish-blue: hsl(237, 12%, 33%);
     --dark-grayish-blue: hsl(240, 6%, 50%);
     --light-grayish-blue: hsl(240, 5%, 91%);
+    --text-hover: #FF8B13;
     --font-size: 12px;
     /* --weights-400: 400;
     --weights-700: 700; */
@@ -21,7 +22,7 @@ body {
     background: linear-gradient(var(--soft-violet), var(--soft-blue));
 }
 
-@media only screen and (min-width : 375px ) and (max-width : 600px) and (max-height : 667px) {
+@media only screen {
 
     .container {
         width: 90%;
@@ -76,13 +77,15 @@ body {
         color: var(--dark-grayish-blue);
     }
 
-    .content-container>section>div {
+    .accordion-question{
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
     }
-
+    .accordion-question:hover{
+        color: var(--text-hover);
+    }
     h1 {
         font-family: sans-serif;
         src: url(./static/KumbhSans-Medium.ttf);
@@ -91,23 +94,29 @@ body {
         text-shadow: 0 0 1px var(--very-dark-grayish-blue);
         text-align: center;
     }
-
-    h3 {
-        width: 90%;
-    }
-
     p {
         margin-top: -0.5em;
     }
-
-    .accordion-ic {
-        transform: rotate(0);
-    }
-
-    .accordion-content {
-        width: 90%;
-        font-size: 0.8rem;
+    .accordion-answer{
         display: none;
+        transition: all .3s linear;
     }
-
+    .active .accordion-answer{
+        display:block;
+        transition: all .3s linear;
+    }
+    .active .accordion-question{
+        color: #000;
+    }
+    .active .accordion-question:hover{
+        color: var(--text-hover);
+    }
+    .accordion-ic{
+        transform: rotate(0);
+        transition: all .3s linear;
+    }
+    .active .accordion-ic{
+        transform: rotate(180deg);
+        transition: all .3s linear;
+    }
 }

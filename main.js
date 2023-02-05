@@ -1,13 +1,10 @@
-const accordionIc = document.querySelectorAll(".accordion-ic");
-
-accordionIc.forEach(function(click){
-    click.addEventListener('click', function(){
-        click.classList.toggle('active');
-        let accordionContent = click.nextElementSibling;
-        if(accordionContent.style.display === "none"){
-            accordionContent.style.display = "block";
-        }else{
-            accordionContent.style.display = "none";
+const accordionQuestion = document.querySelectorAll(".accordion-question");
+accordionQuestion.forEach((question) => {
+    question.addEventListener('click', () => {
+        if (question.parentNode.classList.contains('active')) {
+            question.parentNode.classList.remove('active');
+        } else {
+            question.parentNode.classList.add('active');
         }
     })
 })
