@@ -16,209 +16,141 @@
 body {
     font-family: "kumbhsan-400", sans-serif;
     font-size: var(--font-size);
-    background: linear-gradient(var(--soft-violet), var(--soft-blue), var(--soft-violet));
+    background: linear-gradient(var(--soft-violet), var(--soft-blue));
 
 }
-
-
-.container {
-    width: 90%;
+.container{
+    width: 100%;
     height: 100%;
-    margin: 12em auto 2em;
+    margin: 12em auto 3em;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 25px;
+    box-shadow: 0 10px 100px 0 #292929;
 }
 
-.bg-pattern-img {
-    display: none;
-    width: 70%;
-    height: 20em;
+.content-container{
+    margin: 0 2em 5em;
+}
+.bg-pattern-img{
+    width: 100%;
+    height: 15vh;
     background: url(./images/bg-pattern-mobile.svg) no-repeat;
+    background-position: center;
     background-size: contain;
+    position: relative;
 }
 
-.container::after {
+.bg-pattern-img::after{
+    width: 100%;
+    height: 25vh;
     content: "";
-    width: 70%;
-    height: 20em;
     background: url(./images/illustration-woman-online-mobile.svg) no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: translateY(-60%);
+    position: absolute;
+}
+h1{
+    font-family: "kumbhsan-700", sans-serif;
+    src: url(./static/KumbhSans-SemiBold.ttf);
+    text-align: center;
+    font-size: 2rem;
+    color: var(--very-dark-grayish-blue);
+    text-shadow: 0 0 1px var(--very-dark-grayish-blue);
 }
 
-.content-container {
-    width: 85%;
-    margin: 10em auto 3em;
+h3{
+    color: var(--dark-grayish-blue);
+    transition: all .5s ease-out;
 }
 
-.content-container>section {
-    border-bottom: 1px solid var(--light-grayish-blue);
-    font-family: sans-serif;
-    font-size: 0.7rem;
-    src: url(./static/KumbhSans-Medium.ttf);
+/* h3:hover{
+    color: #FF8B13;
+} */
+
+p{
+    width: 80%;
+    font-size: 0.8rem;
     color: var(--dark-grayish-blue);
 }
+section{
+    width: 45vh;
+    border-bottom: 1px solid var(--light-grayish-blue);
+}
 
-.accordion-question {
-    cursor: pointer;
+.accordion-question{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.accordion-question:hover {
+.accordion-question:hover{
+    cursor: pointer;
     color: var(--text-hover);
 }
 
-h1 {
-    font-family: sans-serif;
-    src: url(./static/KumbhSans-Medium.ttf);
-    font-size: 2rem;
-    color: var(--very-dark-grayish-blue);
-    text-shadow: 0 0 1px var(--very-dark-grayish-blue);
-    text-align: center;
-}
-
-p {
-    margin-top: -0.5em;
-}
-
-.accordion-answer {
+.accordion-answer{
+    margin-top: -1em;
     display: none;
-    transition: all .3s linear;
-    -webkit-transition-property: all .3s linear;
+}
+.accordion-ic{
+    cursor: pointer;
+    transform: rotate(0);
+    transition: all .75s ease-out;
 }
 
-.active .accordion-answer {
-    display: block;
-    transition: all .3s linear;
-    -webkit-transition-property: all .3s linear;
-}
-
-.active .accordion-question {
-    color: #000;
-}
-
-.active .accordion-question:hover {
+.accordion-ic:hover{
+    transform: rotate(45deg);
+    transition: all .5s ease-out;
     color: var(--text-hover);
 }
-
-.accordion-ic {
-    transform: rotate(0);
-    transition: all .3s linear;
-    -webkit-transition-property: all .3s linear;
-}
-
-.active .accordion-ic {
+.active .accordion-ic{
     transform: rotate(180deg);
-    transition: all .3s linear;
-    -webkit-transition-property: all .3s linear;
+    transition: all .75s ease-out;
+}
+.active .accordion-answer{
+    display: block;
+}
+.active h3{
+    text-shadow: 0 0 1px var(--very-dark-grayish-blue);
+    transition: all .5s ease-out;
 }
 
-
-/* mobile */
-@media only screen and (min-width: 375px) {
-    .bg-pattern-img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -80%);
-    }
-
-    .container::after {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -130%);
-    }
-}
-
-/* mobile  */
-@media only screen and (min-width: 768px) {
-
-    .container {
-        font-size: 1.2rem;
-    }
-
-    .container::after {
-        all: unset;
-    }
-
-    .bg-pattern-img {
-        top: 50%;
-        left: 50%;
-        transform: translate(-52%, -70%);
-    }
-
-    .container::after {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -115%);
-    }
-
-    .accordion-content {
-        font-size: 1.2rem;
-    }
-
-    .attribution {
-        font-size: 1rem !important;
-    }
-}
-
-/* desktop */
-@media only screen and (min-width: 820px) {
-    .container {
-        width: 50%;
-        height: 25em;
+@media only screen and (min-width: 800px){
+    .container{
+        width: 80vh;
         flex-direction: unset;
         justify-content: space-between;
     }
     .bg-pattern-img{
-        all: unset;
-    }
-    .bg-pattern-desktop {
-        width: 150%;
-        height: 150%;
+        width: 500px;
+        height: 400px;
+        background: url(./images/bg-pattern-desktop.svg) no-repeat;
+        background-position: center;
         background-size: contain;
-        background-repeat: no-repeat;
-        transform: translate(-50%, 0%);
+        transform: translate();
+        position: relative;
     }
-
-    .container::before {
-        position: absolute;
-        content: "";
-        width: 25%;
-        height: 25%;
+    .bg-pattern-img::before{
+        width: 100%;
+        height: 15vh;
         background: url(./images/illustration-woman-online-desktop.svg) no-repeat;
+        background-position: center;
         background-size: contain;
-        transform: translateX(-10%);
-        z-index: 0;
-    }
-
-    .container::after {
         position: absolute;
+    }
+    .bg-pattern-img::after{
+        width: 100%;
+        height: 25vh;
         content: "";
-        width: 15%;
-        height: 15%;
         background: url(./images/illustration-box-desktop.svg) no-repeat;
+        background-position: center;
         background-size: contain;
-        transform: translate(-200%, -40%);
-        z-index: 1;
-    }
-    .accordion-content {
-        font-size: unset;
-    }
-
-    .attribution {
-        font-size: unset !important;
-    }
-
-    .content-container {
-        margin: -20em 2em
-    }
-    h1{
-        text-align: start;
+        transform: translateY(-60%);
+        position: absolute;
     }
 }
