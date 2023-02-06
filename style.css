@@ -18,6 +18,7 @@ body {
     font-size: var(--font-size);
     background: linear-gradient(var(--soft-violet), var(--soft-blue));
 
+    background: linear-gradient(var(--soft-violet), var(--soft-blue), var(--soft-violet));
 }
 .container{
     width: 100%;
@@ -237,3 +238,4 @@ section{
         position: absolute;
     }
 } 93467cee74360010009dd01a90b598c8ec3f3f2c
+}
