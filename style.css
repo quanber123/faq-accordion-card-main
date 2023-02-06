@@ -16,7 +16,6 @@
 body {
     font-family: "kumbhsan-400", sans-serif;
     font-size: var(--font-size);
-    background: linear-gradient(var(--soft-violet), var(--soft-blue), var(--soft-violet));
 
 }
 .container{
