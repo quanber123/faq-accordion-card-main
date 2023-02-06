@@ -16,14 +16,11 @@
 body {
     font-family: "kumbhsan-400", sans-serif;
     font-size: var(--font-size);
-    background: linear-gradient(var(--soft-violet), var(--soft-blue));
-
     background: linear-gradient(var(--soft-violet), var(--soft-blue), var(--soft-violet));
 }
 .container{
     width: 100%;
     /* height: 100%; */
-    height: 100%;
     margin: 12em auto 3em;
     background: #fff;
     display: flex;
@@ -33,7 +30,6 @@ body {
     border-radius: 25px;
     box-shadow: 0 10px 100px 0 #292929;
 }
-
 .content-container{
     width: 80%;
     margin: 0 auto 5em;
@@ -41,22 +37,14 @@ body {
 .bg-pattern-img{
     width: 100%;
     height: 10em;
-    margin: 0 2em 5em;
-}
-.bg-pattern-img{
-    width: 100%;
-    height: 15vh; 93467cee74360010009dd01a90b598c8ec3f3f2c
     background: url(./images/bg-pattern-mobile.svg) no-repeat;
     background-position: center;
     background-size: contain;
     position: relative;
 }
-
 .bg-pattern-img::after{
     width: 100%;
-<<<<<<< HEAD
     height: 15em;
-    height: 25vh; 93467cee74360010009dd01a90b598c8ec3f3f2c
     content: "";
     background: url(./images/illustration-woman-online-mobile.svg) no-repeat;
     background-position: center;
@@ -72,63 +60,41 @@ h1{
     color: var(--very-dark-grayish-blue);
     text-shadow: 0 0 1px var(--very-dark-grayish-blue);
 }
-
 h3{
     color: var(--dark-grayish-blue);
     transition: all .5s ease-out;
 }
-
-<<<<<<< HEAD
 .accordion-content h3:hover{
     color: var(--text-hover);
     scale: 1.1;
 }
-/* h3:hover{
-    color: #FF8B13;
-} */ 93467cee74360010009dd01a90b598c8ec3f3f2c
-
 p{
     width: 80%;
     font-size: 0.8rem;
     color: var(--dark-grayish-blue);
 }
 section{
-    width: 45vh;
     border-bottom: 1px solid var(--light-grayish-blue);
 }
-
-<<<<<<< HEAD
-section{
-    border-bottom: 1px solid var(--light-grayish-blue);
-} 93467cee74360010009dd01a90b598c8ec3f3f2c
 .accordion-question{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-<<<<<<< HEAD
 .accordion-content .accordion-question:hover{
-.accordion-question:hover{ 93467cee74360010009dd01a90b598c8ec3f3f2c
     cursor: pointer;
     color: var(--text-hover);
 }
-
 .accordion-answer{
     margin-top: -1em;
     display: none;
 }
-<<<<<<< HEAD
 .accordion-content .accordion-ic{
-.accordion-ic{ 93467cee74360010009dd01a90b598c8ec3f3f2c
     cursor: pointer;
     transform: rotate(0);
     transition: all .75s ease-out;
 }
-
-<<<<<<< HEAD
 .accordion-content .accordion-ic:hover{
-.accordion-ic:hover{ 93467cee74360010009dd01a90b598c8ec3f3f2c
     transform: rotate(45deg);
     transition: all .5s ease-out;
     color: var(--text-hover);
@@ -137,19 +103,16 @@ section{
     transform: rotate(180deg);
     transition: all .75s ease-out;
 }
-<<<<<<< HEAD
 .active .accordion-ic:hover{
     transform: rotate(135deg);
     transition: all .75s ease-out;
 }
-
 .active .accordion-question:hover{
     cursor: pointer;
 }
 .active .accordion-answer{
     display: flex;
 }
-
 .active h3{
     text-shadow: 0 0 1px var(--very-dark-grayish-blue);
     transition: all .5s ease-out;
@@ -158,68 +121,41 @@ section{
     color: var(--text-hover);
     scale: 1.1;
 }
-
 @media only screen and (min-width: 880px){
     .container{
         margin: 15em auto;
         font-size: .7rem;
         width: 60%;
         height: 50%;
-.active .accordion-answer{
-    display: block;
-}
-.active h3{
-    text-shadow: 0 0 1px var(--very-dark-grayish-blue);
-    transition: all .5s ease-out;
-}
-
-@media only screen and (min-width: 800px){
-    .container{
-        width: 80vh; 93467cee74360010009dd01a90b598c8ec3f3f2c
         flex-direction: unset;
         justify-content: flex-start;
     }
     .bg-pattern-img{
-<<<<<<< HEAD
         width: 100%;
         height: 40em;
         background: url(./images/bg-pattern-desktop.svg) no-repeat;
         background-position:center;
         background-size: contain;
         transform: translate(-50%, 5%);
-        width: 500px;
-        height: 400px;
-        background: url(./images/bg-pattern-desktop.svg) no-repeat;
-        background-position: center;
-        background-size: contain;
-        transform: translate(); 93467cee74360010009dd01a90b598c8ec3f3f2c
         position: relative;
     }
     .bg-pattern-img::before{
         width: 100%;
-<<<<<<< HEAD
         height: 20em;
         content: "";
         background: url(./images/illustration-woman-online-desktop.svg) no-repeat;
         background-position: center;
         background-size: contain;
         transform: translate(20%, 50%);
-        height: 15vh;
-        background: url(./images/illustration-woman-online-desktop.svg) no-repeat;
-        background-position: center;
-        background-size: contain; 93467cee74360010009dd01a90b598c8ec3f3f2c
         position: absolute;
     }
     .bg-pattern-img::after{
         width: 100%;
-<<<<<<< HEAD
         height: 15em;
-        height: 25vh; 93467cee74360010009dd01a90b598c8ec3f3f2c
         content: "";
         background: url(./images/illustration-box-desktop.svg) no-repeat;
         background-position: center;
         background-size: contain;
-<<<<<<< HEAD
         transform: translateY(95%);
         position: absolute;
     }
@@ -233,9 +169,4 @@ section{
         width: 100%;
         margin-top: 5em;
     }
-}
-        transform: translateY(-60%);
-        position: absolute;
-    }
-} 93467cee74360010009dd01a90b598c8ec3f3f2c
 }
